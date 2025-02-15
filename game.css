@@ -1,0 +1,109 @@
+body
+{
+    /* background-image: url(/game/images/back_stars.gif); */
+   background-image: url(/game/images/back02.png);
+    background-position:center ;
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    padding-top: 80px;
+
+}
+
+header 
+{
+    width:200px;
+    height: 350px;
+
+    border-radius: 30px;
+    margin: auto;
+    background-color: #38a0e1db;
+
+    padding: 40px;
+
+    box-shadow: 5px 5px lightblue;
+
+    text-align: center;
+
+}
+div{
+    border-radius: 20px;
+
+    margin: auto;
+    margin-right: 40px;
+
+    width: 1000px;
+    height: 523px;
+    overflow: hidden;
+    align-items: start;
+    position: relative;
+    top:0;
+    left: 0;
+
+    border-color: #fff;
+    border: 15px;
+}
+
+.back
+{
+    position:absolute;
+    z-index: 1;
+
+    opacity: 90%;
+
+}
+.cart
+{
+    position:relative;
+    z-index: 3;
+    margin:0px;
+    margin-top: 10px;
+    margin-right: 0px;
+    left: 0px;
+    visibility: hidden;
+}
+
+.gift
+{
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+    top:0px;
+    left:0px;
+
+}
+.chimney
+{
+    position: absolute;
+    z-index: 4;
+    top:210px;
+    left: 0;
+    visibility: hidden;
+}
+
+button{
+
+    width: 80px;
+    height:40px;
+
+    border-radius: 20px;
+
+    border-color: rgba(69, 203, 69, 0.911);
+    
+}
+
+button:hover
+{
+    background-color: rgba(83, 206, 83, 0.911);
+    transition-duration: 0.5s;
+    
+}
+
+.score
+{
+    color: crimson;
+}
