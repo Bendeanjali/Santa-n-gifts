@@ -1,7 +1,7 @@
-body
+/*body
 {
-    /* background-image: url(/game/images/back_stars.gif); */
-   background-image: url(/game/images/back02.png);
+    
+   background-image: url(./images/back_stars.gif);
     background-position:center ;
     background-size:auto;
     background-repeat: no-repeat;
@@ -9,53 +9,124 @@ body
     display: flex;
     align-items: center;
     gap: 50px;
-
     padding-top: 80px;
 
+}*/
+header {
+    width: 20vw;  /* 20% of the parent/container width */
+    height: 55vh; /* 60% of the parent/container height */
+    position: absolute;
+    top: 50%;
+    right: 2vw;  /* Adjust spacing from the right */
+    transform: translateY(-50%);
+    border-radius: 5%; /* Keep it responsive */
+    background-color: #38a0e1db;
+    padding: 2vw; /* Adjust padding proportionally */
+    box-shadow: 5px 5px lightblue;
+    text-align: center;
 }
 
+div {
+    border-radius: 3%;
+    margin: auto;
+    width: 70vw; /* 70% of the container width */
+    height: 80vh; /* 80% of the viewport height */
+    overflow: hidden;
+    position: absolute;
+    align-items: start;
+    top: 50%;
+    left: 2vw; /* Adjust spacing from the left */
+    transform: translateY(-50%);
+}
+
+body { 
+    background-image: url(./images/back_stars.gif);
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    /*height: 100vh; 
+    width: 100vw; 
+    display: flex;
+    gap: 50px;*/
+    align-items: center;
+    padding-top: 2%;
+}
+
+
+/*
 header 
 {
     width:200px;
     height: 350px;
-
+    position:absolute;
     border-radius: 30px;
     margin: auto;
     background-color: #38a0e1db;
-
     padding: 40px;
-
     box-shadow: 5px 5px lightblue;
-
     text-align: center;
 
-}
-div{
-    border-radius: 20px;
+} */
 
+    
+
+/*header {
+    width: 200px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    right: 20px; 
+    transform: translateY(-50%);
+    border-radius: 30px;
+    background-color: #38a0e1db;
+    padding: 40px;
+    box-shadow: 5px 5px lightblue;
+    text-align: center;
+}*/
+
+/*div{
+    border-radius: 20px;
     margin: auto;
     margin-right: 40px;
-
     width: 1000px;
     height: 523px;
     overflow: hidden;
     align-items: start;
-    position: relative;
+    position: absolute;
     top:0;
     left: 0;
-
     border-color: #fff;
     border: 15px;
 }
+    */
+/*div {
+    border-radius: 20px;
+    margin: auto;
+    width: 1000px;
+    height: 523px;
+    overflow: hidden;
+    position:absolute;
+    align-items: start;
+    top: 50%;
+    left: 20px; 
+   transform: translateY(-50%);
 
+  
+} 
+*/
 .back
 {
-    position:absolute;
+    position:fixed;
     z-index: 1;
-
     opacity: 90%;
+    height:auto;
 
 }
+
+    
 .cart
 {
     position:relative;
@@ -85,11 +156,12 @@ div{
     visibility: hidden;
 }
 
+
 button{
 
     width: 80px;
     height:40px;
-
+    align-items: center;
     border-radius: 20px;
 
     border-color: rgba(69, 203, 69, 0.911);
@@ -106,4 +178,29 @@ button:hover
 .score
 {
     color: crimson;
+}
+h1{
+    margin-top: auto;
+    padding-right:20px;
+    padding-top:20px;
+}
+@media (max-width: 768px) {
+    header {
+        width: 30vw;
+        height: 40vh;
+        right: 5vw;
+    }
+
+    div {
+        width: 90vw;
+        height: 70vh;
+    }
+
+    button {
+        width: 12vw;
+        height: 6vh;
+    }
+}
+p{
+    font-size:larger;
 }

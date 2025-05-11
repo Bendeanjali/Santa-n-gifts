@@ -1,0 +1,68 @@
+@media (max-width: 479px) {
+    div {
+        width: 100%; 
+        height: auto;
+        left: 0; 
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    header {
+        width: 150px;
+        height: auto;
+        right: 10px;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    h2, h3, h1 {
+        font-size: 14px;
+    }
+
+    button {
+        width: 70px;
+        height: 35px;
+    }
+
+    .cart, .gift, .chimney {
+        width: 50px; 
+        height: auto;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    div {
+        width: 90%;
+        left: 5%;
+    }
+
+    header {
+        width: 40%;
+        right: 5%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    div {
+        width: 70%;
+        left: 15%;
+    }
+
+    header {
+        width: 30%;
+        right: 15%;
+    }
+}
+
+/*@media (min-width: 1201px) {
+    div {
+        width: 60%;
+        left: 20%;
+    }
+
+    header {
+        width: 50px; 
+        height: auto;
+    }
+}
+*/
