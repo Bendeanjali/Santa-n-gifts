@@ -8,6 +8,7 @@
     <title>Delivary game</title>
 
     <link rel="stylesheet" href="game.css">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,40 +16,51 @@
 </head>
 
 <body>
-    <div>
-        <img class="back" src="/game/images/night_back.jpg" alt="back">
-
-        <img id="cart" class="cart" src="/game/images/santa_cart_right.png" alt="cart">
-        
-        <img id="gift" class="gift" src="/game/images/gift.png" alt="gifts">
-
-        <img id="chimney" class="chimney" src="/game/images/chimney1.png" alt="chimney">
-
-    </div>
-
-    <header>
-
-        <h2 id="timer">02:00</h2>
-
-        <button id="start">Start</button>
-        
     
-            </br>
+        <div>
+            <img class="back" src="images/night_back.jpg" alt="back">
 
-            </br>
+            <img id="cart" class="cart" src="/game/images/santa_cart_right.png" alt="cart">
+            
+            <img id="gift" class="gift" src="/game/images/gift.png" alt="gifts">
 
-        <h3><i class="fa-solid fa-arrow-right"></i> : Move Right</h3>
+            <img id="chimney" class="chimney" src="/game/images/chimney1.png" alt="chimney">
+
+        </div>
+
+        <header>
+
+            <h2 id="timer">02:00</h2>
+            
+
+            <button id="start">Start</button>
+            
         
-        <h3><i class="fa-solid fa-arrow-left"></i> : Move Right</h3>
-      
-        <h3> <i class="fa-solid fa-arrow-down"></i> : Drop Gifts</h3>
+                </br>
 
-        <h1 id="score">Goals : 0</h1>
+                </br>
+
+            <h3><i class="fa-solid fa-arrow-right"></i> : Move Right</h3>
+            
+            <h3><i class="fa-solid fa-arrow-left"></i> : Move Right</h3>
         
+            <h3> <i class="fa-solid fa-arrow-down"></i> : Drop Gifts</h3>
+            
 
-    </header>
+            <h1 id="score">Goals:0</h1>
+            <p id="highscore">Highest Score: 0</p>
 
+            
 
+        </header>
+    
+        <audio id="bgAudio" loop>
+            <source src="./images/christmas-spirit-265741.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="threeSecAudio">
+            <source src="./images/time-passing-sound-effect-fast-clock-108403.mp3" type="audio/mpeg">
+        </audio>
+        
     <script src="game.js"></script>
 </body>
 

@@ -7,6 +7,8 @@ var gift = document.getElementById("gift");
 var chimney =document.getElementById("chimney");
 
 var scoreshow = document.getElementById("score");
+var bgAudio = document.getElementById("bgAudio");
+var threeSecAudio = document.getElementById("threeSecAudio");
 
 var score = 1;
 start.onclick = startgame;
@@ -23,8 +25,9 @@ function drop() {
 
         if (position==210 && (Math.abs(chimney.offsetLeft - gift.offsetLeft+30) <=15)) 
         {
-            scoreshow.innerHTML = "Goals : " + (score+=10);
-            scoreshow.style.color="crimson";
+             score+=10;
+             updateScore();
+           
             newlocation();
         }
 
@@ -34,6 +37,15 @@ function drop() {
         }
 
     }, 10);
+}
+function updateScore() {
+    scoreshow.innerHTML = "Goals : " + score;
+// Check if current score exceeds highest score
+    if (score > highscore) {
+        scoreshow.style.color = "green"; 
+    } else {
+        scoreshow.style.color = "crimson";
+    }
 }
 
 var prev=0;
@@ -59,7 +71,7 @@ var first = true;
 var timerstarted;
 
 function startgame() {
-
+    bgAudio.play();
 
     if (first) {
         first = false;
@@ -162,12 +174,17 @@ function setTimer() {
     var second = 60;
 
     timerstarted = setInterval(() => {
+        if (minute == 0 && second == 4) {
+            threeSecAudio.play(); // Play warning sound at 3 seconds left
+        }
 
         if (minute == 0 && second == 1) {
             timer.innerHTML = "Time Up!!";
             scoreshow.style.color = "green";
             start.innerHTML = "Play Again";
             clearInterval(timerstarted);
+            updateHighScore();
+            bgAudio.pause();
         }
         else {
             second--;
@@ -186,6 +203,16 @@ function setTimer() {
         }
 
     }, 1000);
+}
+var highscore = localStorage.getItem("highscore") || 0;
+document.getElementById("highscore").innerHTML = "Highest Score: " + highscore;
+
+function updateHighScore() {
+    if (score > highscore) {
+        highscore = score;
+        localStorage.setItem("highscore", highscore);
+        document.getElementById("highscore").innerHTML = "Highest Score: " + highscore;
+    }
 }
 
 
